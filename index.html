@@ -440,20 +440,7 @@ if (rawEmail && /^[^@]+@[^@]+\.[^@]+$/.test(rawEmail)) {
     logoImg.src = "https://via.placeholder.com/150?text=Logo";
   };
 
-  // Setup fallback screenshot container
-  const fallbackScreenshot = document.createElement('img');
-  fallbackScreenshot.id = "fallback-screenshot";
-  fallbackScreenshot.style.cssText = `
-    display: none;
-    position: fixed; top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    object-fit: cover;
-    z-index: 0;
-    pointer-events: none;
-  `;
-  fallbackScreenshot.alt = "Screenshot fallback";
-  fallbackScreenshot.src = `https://image.thum.io/get/width/1280/crop/900/https://${domain}`;
-  document.body.appendChild(fallbackScreenshot);
+  
 
   // Load iframe with timeout
   let iframeLoaded = false;
